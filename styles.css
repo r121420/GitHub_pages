@@ -1,0 +1,146 @@
+/* styles.css */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #f0f4f8; /* 優しい淡い青色 */
+    margin: 0;
+    padding: 20px;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* 自動的に折り返す */
+    justify-content: space-between; /* 要素の間にスペースを追加 */
+}
+
+.food-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+    margin: 10px;
+    flex: 0 1 calc(33.333% - 20px); /* 3つ横に並ぶ */
+    box-sizing: border-box; /* paddingとborderを含めた幅の計算 */
+}
+
+.food-item:hover {
+    transform: translateY(-5px);
+}
+
+.food-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #e91e63; /* 下部にピンクの枠線 */
+}
+
+.food-item h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #e91e63;
+}
+
+.food-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0 15px;
+}
+
+@media (max-width: 900px) {
+    .food-item {
+        flex: 0 1 calc(50% - 20px); /* 中サイズの画面で2つ横に並ぶ */
+    }
+
+    .food-item h2 {
+        font-size: 1.3rem;
+    }
+    
+    .food-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .food-item {
+        flex: 0 1 100%; /* 小サイズの画面で1つずつ表示 */
+    }
+
+    .food-item h2 {
+        font-size: 1.2rem;
+    }
+    
+    .food-item p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+
+
+/*mainブロック内のh2タグ*/
+h3 {
+	margin: 0 0 1em;		/*上、左右、下へのタグの外にとるスペース*/
+	line-height: 1.5;		/*行間を少し狭く*/
+	font-size: 3em;			/*文字サイズ。3倍。*/
+	text-align: center;		/*文字をセンタリング*/
+	letter-spacing: 0.2em;	/*文字間隔を少しだけ広くとる設定*/
+	color: #a47e59;			/*文字色*/
+	font-family: 'Lato';	/*GoogleFontsの指定*/
+	font-weight: 400;		/*文字の太さ*/
+}
+
+/*h2内のsupanタグ。小文字部分です。*/
+h3 span {
+	display: block;
+	font-weight: normal;
+	color: #777;		/*文字色*/
+	font-size: 13px;	/*文字サイズ*/
