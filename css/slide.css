@@ -60,7 +60,7 @@
 
 /*２枚目画像*/
 .slide2 {
-	background: url('../images/rb.jpg') no-repeat center center / cover;	/*２枚目の背景画像の読み込み*/
+	background: url('../images/rb2.png') no-repeat center center / cover;	/*２枚目の背景画像の読み込み*/
 	justify-content: flex-end;	/*テキストブロックを右側に*/
 	text-align: right;			/*テキストを右寄せ*/
 }
