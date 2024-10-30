@@ -1,0 +1,230 @@
+/* styles.css */
+body {
+	margin: 0;padding:0;
+	font-family: "M PLUS 1", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	-webkit-text-size-adjust: none;
+	background: #f2f1f3 url('../images/bg.png') repeat center top / 150px;	/*背景色、背景壁紙の読み込み。壁紙の幅を150pxに指定してリピート。*/
+	color: #333;		/*文字色*/
+	line-height: 2;		/*行間*/
+	animation: opa1 0.2s 0.5s both;	/*0.5秒待機後、0.2秒かけてフェードイン表示*/
+}
+
+/*リセット*/
+figure {margin: 0;}
+dd {margin: 0;}
+nav,ul,li,ol {margin: 0;padding: 0;}
+nav ul {list-style: none;}
+input {font-size: 1rem;}
+
+/*ul,ol*/
+ul,ol {margin-left: 1.5rem;margin-bottom: 1rem;}
+
+/*table全般の設定*/
+table {border-collapse:collapse;}
+
+/*画像全般の設定*/
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* 自動的に折り返す */
+    justify-content: space-between; /* 要素の間にスペースを追加 */
+}
+
+.food-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+    margin: 10px;
+    flex: 0 1 calc(33.333% - 20px); /* 3つ横に並ぶ */
+    box-sizing: border-box; /* paddingとborderを含めた幅の計算 */
+}
+
+.food-item:hover {
+    transform: translateY(-5px);
+}
+
+.food-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #e91e63; /* 下部にピンクの枠線 */
+}
+
+.food-item h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #e91e63;
+}
+
+.food-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0 15px;
+}
+
+@media (max-width: 900px) {
+    .food-item {
+        flex: 0 1 calc(50% - 20px); /* 中サイズの画面で2つ横に並ぶ */
+    }
+
+    .food-item h2 {
+        font-size: 1.3rem;
+    }
+    
+    .food-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .food-item {
+        flex: 0 1 100%; /* 小サイズの画面で1つずつ表示 */
+    }
+
+    .food-item h2 {
+        font-size: 1.2rem;
+    }
+    
+    .food-item p {
+        font-size: 0.9rem;
+    }
+}
+
+.container3 {
+    max-width: 600px;
+    margin: auto;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center; /* 中央揃え */
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    color: #555;
+}
+
+
+
+
+header {
+    background-color: #2c3e50; /* ダークブルー */
+    color: white; /* テキストを白に */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style-type: none; /* リストのデフォルトのスタイルを削除 */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* 横に並べる */
+    margin: 0 15px; /* リストアイテムの間隔 */
+}
+
+nav ul li a {
+    color: white; /* リンクを白に */
+    text-decoration: none; /* 下線を削除 */
+    font-size: 1.2em;
+    transition: color 0.3s; /* ホバー時のトランジション */
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* ホバー時の色をオレンジに */
+}
+
+
+
+.container2 {
+    text-align: center;
+}
+
+.message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+
+
+
+/*mainブロック内のh2タグ*/
+h4 {
+	margin: 0 0 1em;		/*上、左右、下へのタグの外にとるスペース*/
+	line-height: 1.5;		/*行間を少し狭く*/
+	font-size: 3em;			/*文字サイズ。3倍。*/
+	text-align: center;		/*文字をセンタリング*/
+	letter-spacing: 0.2em;	/*文字間隔を少しだけ広くとる設定*/
+	color: #a47e59;			/*文字色*/
+	font-family: 'Lato';	/*GoogleFontsの指定*/
+	font-weight: 400;		/*文字の太さ*/
+}
+
+/*h2内のsupanタグ。小文字部分です。*/
+h4 span {
+	display: block;
+	font-weight: normal;
+	color: #777;		/*文字色*/
+	font-size: 13px;	/*文字サイズ*/
