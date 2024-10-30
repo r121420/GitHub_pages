@@ -216,7 +216,7 @@ h4 {
 	line-height: 1.5;		/*行間を少し狭く*/
 	font-size: 3em;			/*文字サイズ。3倍。*/
 	text-align: center;		/*文字をセンタリング*/
-	letter-spacing: 0.2em;	/*文字間隔を少しだけ広くとる設定*/
+	letter-spacing: 0.1em;	/*文字間隔を少しだけ広くとる設定*/
 	color: #a47e59;			/*文字色*/
 	font-family: 'Lato';	/*GoogleFontsの指定*/
 	font-weight: 400;		/*文字の太さ*/
